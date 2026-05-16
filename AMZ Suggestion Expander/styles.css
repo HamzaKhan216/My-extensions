@@ -1,0 +1,147 @@
+/* =========================================================
+   AGGRESSIVE HIDING OF AMAZON'S NATIVE DROPDOWN
+   ========================================================= */
+#nav-flyout-searchAjax,
+#nav-flyout-iss-anchor,
+.autocomplete-results-container,
+.left-pane-results-container,
+.two-pane-results-container,
+#sac-autocomplete-results-container,
+.nav-iss-flyout,
+.s-suggestion-container {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* =========================================================
+   CUSTOM EXTENSION DROPDOWN STYLING (v3 POWER)
+   ========================================================= */
+#ase-custom-container {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 2147483647 !important;
+    font-family: Arial, sans-serif;
+    color: #111;
+    min-width: 1000px; /* Wider for 3 columns */
+    display: none;
+}
+
+.ase-columns {
+    display: grid; /* Use Grid for better column control */
+    grid-template-columns: 300px 1fr 1fr; /* Base | Prefixes | Alphabet */
+    width: 100%;
+}
+
+.ase-col {
+    border-right: 1px solid #f0f0f0;
+    max-height: 500px; /* Make columns scrollable */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.ase-col:last-child {
+    border-right: none;
+}
+
+.ase-group-header {
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+    position: sticky; /* Header stays visible on scroll */
+    top: 0;
+    background: #f6f6f6;
+}
+.ase-group-header.green {
+    background-color: #eaf5e9;
+}
+.ase-group-header.gray {
+    background-color: #f6f6f6;
+}
+.ase-group-header.blue {
+    background-color: #e3f2fd; /* Light blue */
+    color: #0d47a1;
+}
+
+.ase-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.ase-item:hover {
+    background-color: #f0f0f0;
+}
+.ase-item-text {
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+}
+.ase-item-icon {
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    margin-left: 10px;
+}
+
+/* Footer Styling */
+.ase-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    padding: 8px 15px;
+    font-size: 12px;
+    color: #555;
+}
+.ase-footer-left, .ase-footer-right {
+    display: flex;
+    align-items: center;
+}
+#ase-download-btn {
+    background-color: #ffd814;
+    border: 1px solid #fcd200;
+    border-radius: 3px;
+    padding: 6px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #111;
+}
+#ase-download-btn:hover {
+    background-color: #f7ca00;
+}
+/* Suggestion List Styling
+#ase-suggestion-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.ase-suggestion-item {
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.ase-suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+.ase-suggestion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ase-suggestion-text {
+    display: flex;
+    align-items: center;
+    word-break: break-word;
+}
+.ase-suggestion-icon {
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    margin-left: 10px;
+} */

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "AMZ Suggestion Expander",
+  "version": "1.2.2",
+  "description": "Expands the number of search suggestions that are shown in the Amazon search bar.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.amazon.com/*",
+    "*://completion.amazon.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.com/*"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Remove Shorts",
+  "version": "1.0.0",
+  "description": "Completely removes YouTube Shorts from the homepage, sidebars, and everywhere else.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions":[],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "css":["hide.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
